@@ -119,3 +119,6 @@ au BufWritePost *.go silent! !/usr/local/bin/ctags -R &
 
 " Go Programming vim
 set rtp+=$GOROOT/misc/vim
+
+" supertab based on context
+let g:SuperTabDefaultCompletionType = "context"
