@@ -22,19 +22,62 @@ Bundle 'gmarik/vundle'
 " The following are examples of different formats supported.
 " Keep bundle commands between here and filetype plugin indent on.
 " scripts on GitHub repos
+Bundle 'tpope/vim-sensible'
+Bundle 'tpope/vim-surround'
+Bundle 'nanotech/jellybeans.vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-easymotion'
-" scripts from http://vim-scripts.org/vim/scripts.html
-Bundle 'L9'
-Bundle 'FuzzyFinder'
+Bundle 'Lokaltog/vim-powerline'
+Bundle 'scrooloose/syntastic'
+Bundle 'scrooloose/nerdtree'
+Bundle 'kien/ctrlp.vim'
+Bundle 'rking/ag.vim'
 
 filetype plugin indent on     " required
-"
-" Brief help
-" :BundleList          - list configured bundles
-" :BundleInstall(!)    - install (update) bundles
-" :BundleSearch(!) foo - search (or refresh cache first) for foo
-" :BundleClean(!)      - confirm (or auto-approve) removal of unused bundles
-"
-" see :h vundle for more details or wiki for FAQ
-" NOTE: comments after Bundle commands are not allowed.
+
+color jellybeans
+
+set cursorline
+set clipboard=unnamed
+set encoding=utf-8
+set expandtab
+set history=1000
+set hlsearch
+set ignorecase
+set modelines=0
+set mouse=a
+set nowrap
+set number
+set nowritebackup
+set noswapfile
+set nobackup
+set shiftwidth=2
+set smartcase
+set synmaxcol=128
+set ttyscroll=10
+set tabstop=2
+
+" Automatic formatting
+autocmd FileType go autocmd BufWritePre <buffer> Fmt
+
+" Shortcut for MacOSX copy
+vmap <C-x> :!pbcopy<CR>
+vmap <C-c> :w !pbcopy<CR><CR>
+
+" Switch between last two buffers
+nnoremap <leader>b <C-^>
+
+" NERDTree
+nnoremap <F2> :NERDTreeToggle<CR>
+let NERDTreeHighlightCursorline=1
+let NERDTreeIgnore = ['tmp']
+
+" CtrlP
+nnoremap <F4> t :CtrlP<cr>
+let g:ctrlp_working_path_mode = 2
+let g:ctrlp_by_filename = 1
+let g:ctrlp_max_files = 600
+let g:ctrlp_max_depth = 5
+
+" Go Programming
+set rtp+=$GOROOT/misc/vim
