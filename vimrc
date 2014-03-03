@@ -118,7 +118,11 @@ let g:tagbar_type_go = {
 au BufWritePost *.go silent! !/usr/local/bin/ctags -R &
 
 " Go Programming vim
+filetype off
+filetype plugin indent off
 set rtp+=$GOROOT/misc/vim
+filetype plugin indent on
+syntax on
 
 " supertab based on context
 let g:SuperTabDefaultCompletionType = "context"
