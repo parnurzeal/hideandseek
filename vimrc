@@ -32,6 +32,7 @@ Bundle 'scrooloose/syntastic'
 Bundle 'scrooloose/nerdtree'
 Bundle 'kien/ctrlp.vim'
 Bundle 'rking/ag.vim'
+Bundle 'majutsushi/tagbar'
 
 filetype plugin indent on     " required
 
@@ -68,7 +69,7 @@ vmap <C-c> :w !pbcopy<CR><CR>
 nnoremap <leader>b <C-^>
 
 " NERDTree
-nnoremap <F2> :NERDTreeToggle<CR>
+nmap <F2> :NERDTreeToggle<CR>
 let NERDTreeHighlightCursorline=1
 let NERDTreeIgnore = ['tmp']
 
@@ -78,6 +79,12 @@ let g:ctrlp_working_path_mode = 2
 let g:ctrlp_by_filename = 1
 let g:ctrlp_max_files = 600
 let g:ctrlp_max_depth = 5
+
+" Tagbar
+nmap <F3> :TagbarToggle<CR>
+" Because of old ctags conflict with ctags in brew
+" Need to set direct path to new ctags
+let g:tagbar_ctags_bin = '/usr/local/Cellar/ctags/5.8/bin/ctags'
 
 " Go Programming
 set rtp+=$GOROOT/misc/vim
