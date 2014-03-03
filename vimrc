@@ -62,6 +62,13 @@ set tabstop=2
 " Automatic formatting
 autocmd FileType go autocmd BufWritePre <buffer> Fmt
 
+" Go Programming vim
+filetype off
+filetype plugin indent off
+set rtp+=$GOROOT/misc/vim
+filetype plugin indent on
+syntax on
+
 " Shortcut for MacOSX copy
 vmap <C-x> :!pbcopy<CR>
 vmap <C-c> :w !pbcopy<CR><CR>
@@ -116,13 +123,6 @@ let g:tagbar_type_go = {
 \ }
 " Autotags for go
 au BufWritePost *.go silent! !/usr/local/bin/ctags -R &
-
-" Go Programming vim
-filetype off
-filetype plugin indent off
-set rtp+=$GOROOT/misc/vim
-filetype plugin indent on
-syntax on
 
 " supertab based on context
 let g:SuperTabDefaultCompletionType = "context"
