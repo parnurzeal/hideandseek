@@ -33,6 +33,7 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'kien/ctrlp.vim'
 Bundle 'rking/ag.vim'
 Bundle 'majutsushi/tagbar'
+Bundle 'ervandew/supertab'
 
 filetype plugin indent on     " required
 
