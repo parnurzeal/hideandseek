@@ -76,6 +76,9 @@ vmap <C-c> :w !pbcopy<CR><CR>
 " Switch between last two buffers
 nnoremap <leader>b <C-^>
 
+" Switch between buffers
+noremap <F8> <c-w><c-w>
+
 " NERDTree
 nmap <F2> :NERDTreeToggle<CR>
 let NERDTreeHighlightCursorline=1
