@@ -1,0 +1,8 @@
+# color your terminal
+export CLICOLOR=1
+export LSCOLORS=GxFxCxDxBxegedabagaced
+
+export GREP_OPTIONS='--color=auto'
+
+export PS1="\[\e[01;32m\]\u@\h \[\e[01;34m\]\W \[\`if [ \$? = 0 ]; then echo -e '\e[01;32m\]:)'; else echo -e '\e[01;31m\]:('; fi\` \[\e[01;34m\]$\[\e[0m\] "
+
