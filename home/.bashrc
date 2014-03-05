@@ -2,6 +2,7 @@ source ~/.bash/aliases
 source ~/.bash/completions
 source ~/.bash/paths
 source ~/.bash/config
+source ~/.bash/prompt
 
 # use .localrc for settings specific to one system
 # for SECRET INFO you don't want to show in public, repo.
