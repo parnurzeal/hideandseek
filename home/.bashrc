@@ -4,12 +4,6 @@ source ~/.bash/paths
 source ~/.bash/config
 source ~/.bash/prompt
 
-# use .localrc for settings specific to one system
-# for SECRET INFO you don't want to show in public, repo.
-if [ -f ~/.localrc ]; then
-    source ~/.localrc
-fi
-
 # homeshick setting
 source "$HOME/.homesick/repos/homeshick/homeshick.sh"
 homeshick --quiet refresh
@@ -28,3 +22,11 @@ done
 for file in `find ~/.addons/**/*.bash -type f -not \( -iname "path.bash" -or -iname "aliases.bash"  \)` ; do 
   source $file
 done
+
+# use .localrc for settings specific to one system
+# for SECRET INFO you don't want to show in public, repo.
+if [ -f ~/.localrc ]; then
+    source ~/.localrc
+fi
+
+
