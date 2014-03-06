@@ -1,5 +1,4 @@
-export PATH=$PATH:/usr/local/go/bin
-export GOPATH=/Users/teerapol.watanavekin/myPlayGround/go
 export GOROOT=/usr/local/go
-export PATH=$PATH:$GOPATH/bin
+export GOPATH=$HOME/Workspace/go
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
