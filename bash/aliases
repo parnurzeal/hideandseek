@@ -5,7 +5,7 @@ alias subln="/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl 
 alias ctags=/usr/local/Cellar/ctags/5.8/bin/ctags
 
 # screen sharing in mac os x
-alias vnc="open /System/Library/CoreServices/Screen Sharing.app"
+alias vnc="open /System/Library/CoreServices/Screen\ Sharing.app"
 
 # ls
 alias ls='ls -G'
