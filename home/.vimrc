@@ -130,3 +130,6 @@ au BufWritePost *.go silent! !/usr/local/Cellar/ctags/5.8/bin/ctags -R &
 
 " supertab based on context
 let g:SuperTabDefaultCompletionType = "context"
+
+" go to the position I was when last editing the file
+au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g'\"" | endif
