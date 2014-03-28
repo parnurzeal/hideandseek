@@ -68,6 +68,7 @@ filetype plugin indent off
 set rtp+=$GOROOT/misc/vim
 filetype plugin indent on
 syntax on
+autocmd FileType go nnoremap <F9> :!go install<CR>
 
 " Shortcut for MacOSX copy
 vmap <C-x> :!pbcopy<CR>
@@ -125,7 +126,7 @@ let g:tagbar_type_go = {
     \ 'ctagsargs' : '-sort -silent'
 \ }
 " Autotags for go
-au BufWritePost *.go silent! !/usr/local/bin/ctags -R &
+au BufWritePost *.go silent! !/usr/local/Cellar/ctags/5.8/bin/ctags -R &
 
 " supertab based on context
 let g:SuperTabDefaultCompletionType = "context"
