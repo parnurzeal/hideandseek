@@ -55,7 +55,6 @@ set noswapfile
 set nobackup
 set shiftwidth=2
 set smartcase
-set synmaxcol=128
 set ttyscroll=10
 set tabstop=2
 
