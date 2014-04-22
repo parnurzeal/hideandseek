@@ -6,6 +6,8 @@ source ~/.bash/prompt
 
 # homeshick setting
 source "$HOME/.homesick/repos/homeshick/homeshick.sh"
+homeshick --quiet refresh
+homeshick refresh 10
 
 # load the path files
 for file in ~/.addons/**/path.bash ; do
