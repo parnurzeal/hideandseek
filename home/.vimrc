@@ -34,6 +34,8 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'rking/ag.vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'ervandew/supertab'
+" Prerequisite needed --> github.com/dgryski/vim-godef
+Plugin 'dgryski/vim-godef'
 
 call vundle#end()             " required
 filetype plugin indent on     " required
