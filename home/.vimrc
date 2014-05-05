@@ -36,6 +36,8 @@ Plugin 'majutsushi/tagbar'
 Plugin 'ervandew/supertab'
 " Prerequisite needed --> github.com/dgryski/vim-godef
 Plugin 'dgryski/vim-godef'
+" Go Autocomplete
+Plugin 'nsf/gocode', {'rtp': 'vim/'}
 
 call vundle#end()             " required
 filetype plugin indent on     " required
