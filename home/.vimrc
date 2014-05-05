@@ -135,6 +135,9 @@ au BufWritePost *.go silent! !/usr/local/Cellar/ctags/5.8/bin/ctags -R &
 " supertab based on context
 let g:SuperTabDefaultCompletionType = "context"
 
+" disable omnicompletion from opening scratch preview window on top
+set completeopt-=preview
+
 " go to the position I was when last editing the file
 if has("autocmd")
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g'\"" | endif
