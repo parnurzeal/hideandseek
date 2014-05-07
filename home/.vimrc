@@ -130,6 +130,9 @@ let g:tagbar_type_go = {
 " Autotags for go
 au BufWritePost *.go silent! !/usr/local/Cellar/ctags/5.8/bin/ctags -R &
 
+" Godef
+let g:godef_split=0
+
 " supertab based on context
 let g:SuperTabDefaultCompletionType = "context"
 
