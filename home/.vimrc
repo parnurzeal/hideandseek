@@ -36,6 +36,8 @@ Plugin 'majutsushi/tagbar'
 Plugin 'ervandew/supertab'
 " Prerequisite needed --> github.com/dgryski/vim-godef
 Plugin 'dgryski/vim-godef'
+" Go Autocomplete
+Plugin 'nsf/gocode', {'rtp': 'vim/'}
 
 call vundle#end()             " required
 filetype plugin indent on     " required
@@ -135,6 +137,9 @@ let g:godef_split=0
 
 " supertab based on context
 let g:SuperTabDefaultCompletionType = "context"
+
+" disable omnicompletion from opening scratch preview window on top
+set completeopt-=preview
 
 " go to the position I was when last editing the file
 if has("autocmd")
