@@ -34,6 +34,8 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'rking/ag.vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'ervandew/supertab'
+" Vim Table
+Plugin 'dhruvasagar/vim-table-mode'
 " Prerequisite needed --> github.com/dgryski/vim-godef
 Plugin 'dgryski/vim-godef'
 " Go Autocomplete
