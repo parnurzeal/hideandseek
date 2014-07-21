@@ -137,6 +137,9 @@ au BufWritePost *.go silent! !/usr/local/Cellar/ctags/5.8/bin/ctags -R &
 " Godef
 let g:godef_split=0
 
+" GoImports
+let g:gofmt_command = "goimports"
+
 " supertab based on context
 let g:SuperTabDefaultCompletionType = "context"
 
