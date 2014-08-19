@@ -142,6 +142,8 @@ let g:SuperTabDefaultCompletionType = "context"
 
 " disable omnicompletion from opening scratch preview window on top
 set completeopt-=preview
+" enable normal omnicomplete
+filetype plugin on
 
 " go to the position I was when last editing the file
 if has("autocmd")
