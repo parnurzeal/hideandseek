@@ -132,7 +132,7 @@ let g:tagbar_type_go = {
     \ 'ctagsargs' : '-sort -silent'
 \ }
 " Autotags for go
-au BufWritePost *.go silent! !/usr/local/Cellar/ctags/5.8/bin/ctags -R &
+au BufWritePost *.go silent! !/usr/local/Cellar/ctags/5.8/bin/ctags -R 2> /dev/null &
 
 " Godef
 let g:godef_split=0
