@@ -36,8 +36,9 @@ Plugin 'majutsushi/tagbar'
 Plugin 'ervandew/supertab'
 " Vim Table
 Plugin 'dhruvasagar/vim-table-mode'
-" Prerequisite needed --> github.com/dgryski/vim-godef
-Plugin 'dgryski/vim-godef'
+" Vim-Go Prerequisite 
+" go get -u github.com/jstemmer/gotags
+Plugin 'fatih/vim-go'
 " Go Autocomplete
 Plugin 'nsf/gocode', {'rtp': 'vim/'}
 
@@ -65,23 +66,42 @@ set smartcase
 set ttyscroll=10
 set tabstop=2
 
-" Automatic formatting
-autocmd FileType go autocmd BufWritePre <buffer> Fmt
-
 " Go Programming vim
 filetype off
 filetype plugin indent off
 set rtp+=$GOROOT/misc/vim
 filetype plugin indent on
 syntax on
-autocmd FileType go nnoremap <F9> :!go install<CR>
+
+" GoImports
+let g:gofmt_command = "goimports"
+
+" Setting of vim-go
+" Show word info
+au FileType go nmap <Leader>i <Plug>(go-info)
+" Open Godoc in browser
+au FileType go nmap <Leader>gdb <Plug>(go-doc-browser)
+" Run commands
+au FileType go nmap <leader>r <Plug>(go-run)
+au FileType go nmap <leader>b <Plug>(go-build)
+au FileType go nmap <leader>t <Plug>(go-test)
+au FileType go nmap <leader>c <Plug>(go-coverage)
+au FileType go nmap <F9> <Plug>(go-install)
+au FileType go nmap <leader>v <Plug>(go-vet)
+" Godef
+au FileType go nmap gd <Plug>(go-def)
+au FileType go nmap <Leader>gds <Plug>(go-def-split)
+au FileType go nmap <Leader>gdv <Plug>(go-def-vertical)
+au FileType go nmap <Leader>gdt <Plug>(go-def-tab)
+" Godoc
+au FileType go nmap <Leader>gd <Plug>(go-doc)
 
 " Shortcut for MacOSX copy
 vmap <C-x> :!pbcopy<CR>
 vmap <C-c> :w !pbcopy<CR><CR>
 
 " Switch between last two buffers
-nnoremap <leader>b <C-^>
+nnoremap <leader>w <C-^>
 
 " Switch between buffers
 noremap <F8> <c-w><c-w>
@@ -103,42 +123,6 @@ nmap <F3> :TagbarToggle<CR>
 " Because of old ctags conflict with ctags in brew
 " Need to set direct path to new ctags
 let g:tagbar_ctags_bin = '/usr/local/Cellar/ctags/5.8/bin/ctags'
-" tagbar for golang
-let g:tagbar_type_go = {
-    \ 'ctagstype' : 'go',
-    \ 'kinds'     : [
-        \ 'p:package',
-        \ 'i:imports:1',
-        \ 'c:constants',
-        \ 'v:variables',
-        \ 't:types',
-        \ 'n:interfaces',
-        \ 'w:fields',
-        \ 'e:embedded',
-        \ 'm:methods',
-        \ 'r:constructor',
-        \ 'f:functions'
-    \ ],
-    \ 'sro' : '.',
-    \ 'kind2scope' : {
-        \ 't' : 'ctype',
-        \ 'n' : 'ntype'
-    \ },
-    \ 'scope2kind' : {
-        \ 'ctype' : 't',
-        \ 'ntype' : 'n'
-    \ },
-    \ 'ctagsbin'  : 'gotags',
-    \ 'ctagsargs' : '-sort -silent'
-\ }
-" Autotags for go
-au BufWritePost *.go silent! !/usr/local/Cellar/ctags/5.8/bin/ctags -R &
-
-" Godef
-let g:godef_split=0
-
-" GoImports
-let g:gofmt_command = "goimports"
 
 " supertab based on context
 let g:SuperTabDefaultCompletionType = "context"
