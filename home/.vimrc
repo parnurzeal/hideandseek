@@ -73,9 +73,6 @@ set rtp+=$GOROOT/misc/vim
 filetype plugin indent on
 syntax on
 
-" GoImports
-let g:gofmt_command = "goimports"
-
 " Setting of vim-go
 " Show word info
 au FileType go nmap <Leader>i <Plug>(go-info)
@@ -123,7 +120,6 @@ nmap <F3> :TagbarToggle<CR>
 " Because of old ctags conflict with ctags in brew
 " Need to set direct path to new ctags
 let g:tagbar_ctags_bin = '/usr/local/Cellar/ctags/5.8/bin/ctags'
-
 " supertab based on context
 let g:SuperTabDefaultCompletionType = "context"
 
