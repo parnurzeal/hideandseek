@@ -40,7 +40,7 @@ Plugin 'dhruvasagar/vim-table-mode'
 " go get -u github.com/jstemmer/gotags
 Plugin 'fatih/vim-go'
 " Go Autocomplete
-Plugin 'nsf/gocode', {'rtp': 'vim/'}
+" Plugin 'nsf/gocode', {'rtp': 'vim/'}
 
 call vundle#end()             " required
 filetype plugin indent on     " required
