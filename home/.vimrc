@@ -103,6 +103,12 @@ nnoremap <leader>w <C-^>
 " Switch between buffers
 noremap <F8> <c-w><c-w>
 
+" Shortcut keys moving between tabs
+nnoremap <C-Left> :tabprevious<CR>
+nnoremap <C-Right> :tabnext<CR>
+nnoremap <silent> <A-Left> :execute 'silent! tabmove ' . (tabpagenr()-2)<CR>
+nnoremap <silent> <A-Right> :execute 'silent! tabmove ' . tabpagenr()<CR>
+
 " NERDTree
 nmap <F2> :NERDTreeToggle<CR>
 let NERDTreeHighlightCursorline=1
