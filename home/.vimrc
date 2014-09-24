@@ -74,6 +74,8 @@ filetype plugin indent on
 syntax on
 
 " Setting of vim-go
+" use goimports
+let g:go_fmt_command = "goimports"
 " Show word info
 au FileType go nmap <Leader>i <Plug>(go-info)
 " Open Godoc in browser
