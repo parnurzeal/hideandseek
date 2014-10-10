@@ -34,6 +34,9 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'rking/ag.vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'ervandew/supertab'
+" Markdown
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
 " Vim Table
 Plugin 'dhruvasagar/vim-table-mode'
 " Vim-Go Prerequisite
@@ -108,13 +111,16 @@ noremap <F8> <c-w><c-w>
 " Shortcut keys moving between tabs
 nnoremap <C-Left> :tabprevious<CR>
 nnoremap <C-Right> :tabnext<CR>
-nnoremap <silent> <A-Left> :execute 'silent! tabmove ' . (tabpagenr()-2)<CR>
-nnoremap <silent> <A-Right> :execute 'silent! tabmove ' . tabpagenr()<CR>
+nnoremap <silent> <Esc><Esc>[D :execute 'silent! tabmove ' . (tabpagenr()-2)<CR>
+nnoremap <silent> <Esc><Esc>[C :execute 'silent! tabmove ' . tabpagenr()<CR>
 
 " NERDTree
 nmap <F2> :NERDTreeToggle<CR>
 let NERDTreeHighlightCursorline=1
 let NERDTreeIgnore = ['tmp']
+
+" Markdown settings
+let g:vim_markdown_folding_disabled=1
 
 " CtrlP
 nnoremap <F4> :CtrlP<cr>

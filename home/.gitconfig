@@ -16,7 +16,7 @@
 [alias]
   st          =  status
   cm          =  commit -a
-  cma         =  commit -a --amend -m
+  cma         =  commit -a --amend
   co          =  checkout
   cb          =  checkout -b
   w           =  whatchanged
