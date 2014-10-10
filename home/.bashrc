@@ -6,7 +6,7 @@ source ~/.bash/prompt
 
 # homeshick setting
 source "$HOME/.homesick/repos/homeshick/homeshick.sh"
-# homeshick --quiet refresh 10
+homeshick --quiet refresh 10
 
 # load the path files
 for file in ~/.addons/**/path.bash ; do
@@ -19,7 +19,7 @@ for file in ~/.addons/**/aliases.bash ; do
 done
 
 # load everything.bash but path.bash & aliases.bash
-for file in `find ~/.addons/**/*.bash -type f -not \( -iname "path.bash" -or -iname "aliases.bash"  \)` ; do 
+for file in `find ~/.addons/**/*.bash -type f -not \( -iname "path.bash" -or -iname "aliases.bash"  \)` ; do
   source $file
 done
 
