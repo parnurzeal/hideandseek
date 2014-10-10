@@ -36,7 +36,7 @@ Plugin 'majutsushi/tagbar'
 Plugin 'ervandew/supertab'
 " Vim Table
 Plugin 'dhruvasagar/vim-table-mode'
-" Vim-Go Prerequisite 
+" Vim-Go Prerequisite
 " go get -u github.com/jstemmer/gotags
 Plugin 'fatih/vim-go'
 " Go Autocomplete
@@ -140,3 +140,6 @@ filetype plugin on
 if has("autocmd")
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g'\"" | endif
 endif
+
+" auto delete trailing whitespace
+autocmd BufWritePre * :%s/\s\+$//e
