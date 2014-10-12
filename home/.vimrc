@@ -111,6 +111,8 @@ noremap <F8> <c-w><c-w>
 " Shortcut keys moving between tabs
 nnoremap <C-Left> :tabprevious<CR>
 nnoremap <C-Right> :tabnext<CR>
+inoremap <C-Left> <Esc>:tabprevious<CR>
+inoremap <C-Right> <Esc>:tabnext<CR>
 nnoremap <silent> <Esc><Esc>[D :execute 'silent! tabmove ' . (tabpagenr()-2)<CR>
 nnoremap <silent> <Esc><Esc>[C :execute 'silent! tabmove ' . tabpagenr()<CR>
 
