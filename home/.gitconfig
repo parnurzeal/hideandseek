@@ -15,8 +15,9 @@
 	prompt = false
 [alias]
   st          =  status
-  cm          =  commit -a
-  cma         =  commit -a --amend
+  cm          =  commit
+  cma         =  commit -a
+  cmam        =  commit -a --amend
   co          =  checkout
   cb          =  checkout -b
   w           =  whatchanged
