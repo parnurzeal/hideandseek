@@ -34,6 +34,8 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'rking/ag.vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'ervandew/supertab'
+" Tmux + vim compatible
+Plugin 'christoomey/vim-tmux-navigator'
 " Markdown
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
@@ -115,7 +117,6 @@ inoremap <C-Left> <Esc>:tabprevious<CR>
 inoremap <C-Right> <Esc>:tabnext<CR>
 nnoremap <silent> <Esc><Esc>[D :execute 'silent! tabmove ' . (tabpagenr()-2)<CR>
 nnoremap <silent> <Esc><Esc>[C :execute 'silent! tabmove ' . tabpagenr()<CR>
-
 " NERDTree
 nmap <F2> :NERDTreeToggle<CR>
 let NERDTreeHighlightCursorline=1
@@ -151,3 +152,12 @@ endif
 
 " auto delete trailing whitespace
 autocmd BufWritePre * :%s/\s\+$//e
+
+" bind arrow keys from tmux to vim
+if &term =~ '^screen'
+    " tmux will send xterm-style keys when its xterm-keys option is on
+    execute "set <xUp>=\e[1;*A"
+    execute "set <xDown>=\e[1;*B"
+    execute "set <xRight>=\e[1;*C"
+    execute "set <xLeft>=\e[1;*D"
+endif
