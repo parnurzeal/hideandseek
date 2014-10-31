@@ -35,7 +35,7 @@ Plugin 'rking/ag.vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'ervandew/supertab'
 " Tmux + vim compatible
-Plugin 'christoomey/vim-tmux-navigator'
+"Plugin 'christoomey/vim-tmux-navigator'
 " Markdown
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
