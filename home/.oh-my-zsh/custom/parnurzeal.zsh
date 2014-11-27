@@ -2,7 +2,6 @@
 export PATH="$PATH:/Users/teerapol.watanavekin/.usefulscript"
 # sublime
 alias subln="/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl -n"
-echo "TEST"
 # Golang
 export GOROOT=/usr/local/go
 export GOPATH=$HOME/Workspace/go
