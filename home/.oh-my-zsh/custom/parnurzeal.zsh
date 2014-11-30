@@ -9,3 +9,4 @@ export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
 hash -d gorsrc="$GOPATH/src/rakuten"
 hash -d gomysrc="$GOPATH/src/github.com/parnurzeal"
+hash -d interview="/Users/ParNurZeal/Playground/interview"
