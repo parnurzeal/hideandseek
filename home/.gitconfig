@@ -7,7 +7,7 @@
 	editor = /usr/bin/vim
   whitespace = trailing-space
 [ghq]
-	root = /Users/teerapol.watanavekin/Workspace/go/src/
+	root = /Users/ParNurZeal/Playground/ghq/src
 [merge]
 	tool = vimdiff
 	conflictstyle = diff3
