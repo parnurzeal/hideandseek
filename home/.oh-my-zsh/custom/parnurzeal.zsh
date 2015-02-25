@@ -14,3 +14,6 @@ hash -d interview="/Users/ParNurZeal/PlayGround/interview"
 
 # stop caching for completion in zsh
 zstyle ":completion:*:commands" rehash 1
+
+# setopt for # bash-comment style
+setopt interactivecomments
