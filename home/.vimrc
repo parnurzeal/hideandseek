@@ -48,9 +48,18 @@ Plugin 'fatih/vim-go'
 " Plugin 'nsf/gocode', {'rtp': 'vim/'}
 
 call vundle#end()             " required
+
+" At work, or not:
+if filereadable(expand('~/.at_google'))
+  " Google-only
+  source ~/.vimrc_local
+else
+  " Non-Google only
+endif
+
 filetype plugin indent on     " required
 
-color jellybeans
+color desert
 
 set cursorline
 set clipboard=unnamed
