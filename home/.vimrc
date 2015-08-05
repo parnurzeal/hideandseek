@@ -28,7 +28,14 @@ Plugin 'nanotech/jellybeans.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'Lokaltog/vim-powerline'
-Plugin 'scrooloose/syntastic'
+" At work, or not:
+if filereadable(expand('~/.at_google'))
+  " Google-only
+else
+  " Non-Google only
+  " as there is problem with g-3, we will not use it here
+  Plugin 'scrooloose/syntastic'
+endif
 Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
 Plugin 'rking/ag.vim'
