@@ -87,6 +87,9 @@ set smartcase
 set ttyscroll=10
 set tabstop=2
 
+" Syntax highlight for .ejs
+au BufNewFile,BufRead *.ejs set filetype=html
+
 " Go Programming vim
 filetype off
 filetype plugin indent off
