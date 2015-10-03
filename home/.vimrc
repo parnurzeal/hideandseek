@@ -53,7 +53,8 @@ Plugin 'dhruvasagar/vim-table-mode'
 Plugin 'fatih/vim-go'
 " Go Autocomplete
 " Plugin 'nsf/gocode', {'rtp': 'vim/'}
-
+" Jade syntax
+Plugin 'digitaltoad/vim-jade'
 call vundle#end()             " required
 
 " At work, or not:
