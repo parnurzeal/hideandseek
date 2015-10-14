@@ -19,3 +19,18 @@ function peco-playground () {
 }
 zle -N peco-playground
 bindkey '^\' peco-playground
+
+function peco-any () {
+    local selected_dir=$(find . -path "./.git" -prune -o -name "*" -print | peco --query "$LBUFFER")
+    if [ -d "$selected_dir" ]; then
+        BUFFER="cd ${selected_dir}"
+        zle accept-line
+    elif [ -f "$selected_dir" ]; then
+        #BUFFER="echo ${selected_dir} | xclip -d :0 -sel clip"
+        BUFFER="$BUFFER ${selected_dir}"
+    fi
+    zle clear-screen
+}
+
+zle -N peco-any
+bindkey '^[\' peco-any
