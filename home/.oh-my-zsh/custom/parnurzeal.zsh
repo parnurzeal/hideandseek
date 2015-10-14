@@ -20,5 +20,10 @@ setopt interactivecomments
 alias g++="g++ -std=c++11"
 
 # Set my main git user
-git config --global user.name "parnurzeal"
-git config --global user.email "parnurzeal@gmail.com"
+if [[ -f "$HOME/.at_google" ]]; then
+  git config --global user.name "Theeraphol Wattanavekin"
+  git config --global user.email "twattanavekin@google.com"
+else
+  git config --global user.name "parnurzeal"
+  git config --global user.email "parnurzeal@gmail.com"
+fi
