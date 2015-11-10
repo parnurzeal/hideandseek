@@ -7,7 +7,7 @@ export ZSH=$HOME/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 # ZSH_THEME="robbyrussell"
 # Themes I like:  fino, sporty_256
-ZSH_THEME="fino"
+ZSH_THEME="aGoogle"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
