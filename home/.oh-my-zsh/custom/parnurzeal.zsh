@@ -2,11 +2,6 @@
 export PATH="$PATH:/Users/teerapol.watanavekin/.usefulscript"
 # sublime
 alias subln="/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl -n"
-# Golang
-export GOROOT=/usr/lib/google-golang/
-export GOPATH=$HOME/PlayGround/ghq
-export GOBIN=$GOPATH/gobin
-export PATH=$PATH:$GOROOT/bin:$GOPATH/gobin
 
 hash -d gomysrc="$GOPATH/src/github.com/parnurzeal"
 hash -d interview="/Users/ParNurZeal/PlayGround/interview"
@@ -27,3 +22,20 @@ else
   git config --global user.name "parnurzeal"
   git config --global user.email "parnurzeal@gmail.com"
 fi
+
+# Set ghq path
+if [[ -f "$HOME/.on_gmac" ]]; then
+  git config --global ghq.root "/Users/twattanavekin/PlayGround/ghq"
+else
+  git config --global ghq.root "/Users/ParNurZeal/PlayGround/ghq"
+fi
+
+# Golang
+if [[ -f $HOME/.on_goobuntu ]]; then
+  export GOROOT=/usr/lib/google-golang
+else
+  export GOROOT=/usr/local/go
+fi
+export GOPATH=$HOME/PlayGround/ghq
+export GOBIN=$GOPATH/gobin
+export PATH=$PATH:$GOROOT/bin:$GOPATH/gobin

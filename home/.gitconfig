@@ -1,13 +1,13 @@
 [user]
-	name = Theeraphol Wattanavekin
-	email = twattanavekin@google.com
+	name = parnurzeal
+	email = parnurzeal@gmail.com
 [push]
 	default = simple
 [core]
 	editor = /usr/bin/vim
   whitespace = trailing-space
 [ghq]
-  root = /usr/local/google/home/twattanavekin/PlayGround/ghq
+	root = /Users/twattanavekin/PlayGround/ghq
 [merge]
 	tool = vimdiff
 	conflictstyle = diff3
