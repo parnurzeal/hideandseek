@@ -26,6 +26,8 @@ fi
 # Set ghq path
 if [[ -f "$HOME/.on_gmac" ]]; then
   git config --global ghq.root "/Users/twattanavekin/PlayGround/ghq"
+elif [[ -f "$HOME/.on_goobuntu" ]]; then
+  git config --global ghq.root "/usr/local/google/home/twattanavekin/PlayGround/ghq"
 else
   git config --global ghq.root "/Users/ParNurZeal/PlayGround/ghq"
 fi
