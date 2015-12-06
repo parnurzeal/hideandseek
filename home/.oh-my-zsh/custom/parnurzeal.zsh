@@ -1,3 +1,14 @@
+case ${OSTYPE} in
+  darwin*)
+    echo "I am MacOSX"
+    # https://github.com/tmux/tmux/issues/108
+    tmux set -g status-interval 0
+    ;;
+  linux*)
+    echo "I am linux"
+    ;;
+esac
+
 # RHome path
 export PATH="$PATH:/Users/teerapol.watanavekin/.usefulscript"
 # sublime
