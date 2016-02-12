@@ -24,6 +24,7 @@ zstyle ":completion:*:commands" rehash 1
 setopt interactivecomments
 
 alias g++="g++ -std=c++11"
+alias g++2="g++-4.9 -std=c++11"
 
 # Set my main git user
 if [[ -f "$HOME/.at_google" ]]; then
