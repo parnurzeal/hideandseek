@@ -63,6 +63,8 @@ if filereadable(expand('~/.at_google'))
   source ~/.vimrc_local
 else
   " Non-Google only
+  let g:syntastic_cpp_compiler = 'g++-4.9'
+  let g:syntastic_cpp_compiler_options = ' -std=c++11'
 endif
 
 filetype plugin indent on     " required
