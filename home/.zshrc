@@ -53,7 +53,7 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH="$PATH:/usr/local/homebrew/bin:/usr/local/heroku/bin:/Users/ParNurZeal/PlayGround/pdfminer-20140328/tools:/usr/local/apache-maven/apache-maven-3.1.1/bin:/Users/ParNurZeal/.rbenv/shims:/opt/local/bin:/opt/local/sbin:~/.bin:/usr/local/homebrew/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/go/bin:/usr/texbin:/usr/local/go/bin:/Users/ParNurZeal/Workspace/go/bin:/usr/local/mysql/bin:/Users/ParNurZeal/.rvm/bin"
+export PATH="$HOME/homebrew/bin:$PATH"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
