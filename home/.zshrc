@@ -6,8 +6,8 @@ export ZSH=$HOME/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 # ZSH_THEME="robbyrussell"
-# Themes I like:  fino, sporty_256
-ZSH_THEME="fino"
+# Themes I like:  fino, sporty_256, rkj-repos, mira, crcandy, rgm, josh
+ZSH_THEME="intheloop"
 
 # Uncomment the following line to disable auto-setting terminal title.
 # DISABLE_AUTO_TITLE="true"
