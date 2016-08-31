@@ -18,4 +18,4 @@ alias g++2="g++-4.9 -std=c++11"
 
 # Node.js
 export NVM_DIR="$HOME/.nvm"
-. "$(brew --prefix nvm)/nvm.sh"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
