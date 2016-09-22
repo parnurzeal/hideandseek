@@ -29,10 +29,10 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'Lokaltog/vim-powerline'
 " At work, or not:
-if filereadable(expand('~/.at_google'))
-  " Google-only
+if filereadable(expand('~/.at_g'))
+  " G-only
 else
-  " Non-Google only
+  " Non-G only
   " as there is problem with g-3, we will not use it here
   Plugin 'scrooloose/syntastic'
 endif
