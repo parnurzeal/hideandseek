@@ -28,14 +28,7 @@ Plugin 'nanotech/jellybeans.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'Lokaltog/vim-powerline'
-" At work, or not:
-if filereadable(expand('~/.at_g'))
-  " G-only
-else
-  " Non-G only
-  " as there is problem with g-3, we will not use it here
-  Plugin 'scrooloose/syntastic'
-endif
+Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
 Plugin 'rking/ag.vim'
@@ -58,7 +51,7 @@ Plugin 'digitaltoad/vim-jade'
 call vundle#end()             " required
 
 " At work, or not:
-if filereadable(expand('~/.at_google'))
+if filereadable(expand('~/.at_g'))
   " Google-only
   source ~/.vimrc_local
 else
@@ -183,3 +176,14 @@ if &term =~ '^screen'
     execute "set <xRight>=\e[1;*C"
     execute "set <xLeft>=\e[1;*D"
 endif
+
+" default settings for syntastic
+" TODO: adjust this when knowing more
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
