@@ -55,7 +55,11 @@ call vundle#end()             " required
 " At work, or not:
 if filereadable(expand('~/.at_g'))
   " Google-only
-  source ~/.vimrc_local
+  " Mac or Linux
+  let os = substitute(system('uname'), "\n", "", "")
+  if os == "Linux"
+    source ~/.vimrc_local
+  endif
 else
   " Non-Google only
   let g:syntastic_cpp_compiler = 'g++-4.9'
