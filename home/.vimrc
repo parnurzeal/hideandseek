@@ -30,6 +30,8 @@ Plugin 'Lokaltog/vim-easymotion'
 Plugin 'Lokaltog/vim-powerline'
 Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdtree'
+" Better nerdtree in all tabs
+Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'kien/ctrlp.vim'
 Plugin 'rking/ag.vim'
 Plugin 'majutsushi/tagbar'
@@ -133,7 +135,7 @@ inoremap <C-Right> <Esc>:tabnext<CR>
 nnoremap <silent> <Esc><Esc>[D :execute 'silent! tabmove ' . (tabpagenr()-2)<CR>
 nnoremap <silent> <Esc><Esc>[C :execute 'silent! tabmove ' . tabpagenr()<CR>
 " NERDTree
-nmap <F2> :NERDTreeToggle<CR>
+nmap <F2> :NERDTreeTabsToggle<CR>
 let NERDTreeHighlightCursorline=1
 let NERDTreeIgnore = ['tmp']
 
