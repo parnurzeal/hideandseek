@@ -50,6 +50,8 @@ Plugin 'fatih/vim-go'
 " Plugin 'nsf/gocode', {'rtp': 'vim/'}
 " Jade syntax
 Plugin 'digitaltoad/vim-jade'
+" All-in-one of all langauges (syntax,indent, ...)
+Plugin 'sheerun/vim-polyglot'
 call vundle#end()             " required
 
 " At work, or not:
@@ -193,3 +195,4 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+let g:syntastic_html_checkers=['jshint']
