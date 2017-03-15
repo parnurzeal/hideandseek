@@ -138,9 +138,9 @@ nnoremap <C-Left> :tabprevious<CR>
 nnoremap <C-Right> :tabnext<CR>
 inoremap <C-Left> <Esc>:tabprevious<CR>
 inoremap <C-Right> <Esc>:tabnext<CR>
-nnoremap <C-j> :tabprevious<CR>
+nnoremap <C-h> :tabprevious<CR>
 nnoremap <C-l> :tabnext<CR>
-inoremap <C-j> <Esc>:tabprevious<CR>
+inoremap <C-h> <Esc>:tabprevious<CR>
 inoremap <C-l> <Esc>:tabnext<CR>
 nnoremap <silent> <Esc><Esc>[D :execute 'silent! tabmove ' . (tabpagenr()-2)<CR>
 nnoremap <silent> <Esc><Esc>[C :execute 'silent! tabmove ' . tabpagenr()<CR>
