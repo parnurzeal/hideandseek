@@ -73,7 +73,7 @@ filetype plugin indent on     " required
 color desert
 
 set cursorline
-set clipboard=unnamed
+"set clipboard=unnamed
 set encoding=utf-8
 set expandtab
 set history=1000
