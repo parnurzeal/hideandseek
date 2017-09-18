@@ -24,3 +24,6 @@ export NVM_DIR="$HOME/.nvm"
 # Ruby rvm
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
+# gcloud
+[[ -s "$HOME/google-cloud-sdk" ]] && source "$HOME/google-cloud-sdk/completion.zsh.inc"
+[[ -s "$HOME/google-cloud-sdk" ]] && source "$HOME/google-cloud-sdk/path.zsh.inc"
