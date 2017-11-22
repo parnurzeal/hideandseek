@@ -27,3 +27,7 @@ export NVM_DIR="$HOME/.nvm"
 # gcloud
 [[ -s "$HOME/google-cloud-sdk" ]] && source "$HOME/google-cloud-sdk/completion.zsh.inc"
 [[ -s "$HOME/google-cloud-sdk" ]] && source "$HOME/google-cloud-sdk/path.zsh.inc"
+
+# iTerm integration
+test -e "${HOME}/.iterm2_shell_integration.zsh" || echo "No iTerm's shell integration installed"
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"

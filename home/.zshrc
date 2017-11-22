@@ -64,9 +64,6 @@ if [[ -n "$G_LINUX" ]]; then
   GOLANG_ROOT=/usr/lib/google-golang
 fi
 
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
-
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
@@ -82,13 +79,6 @@ export PATH="$HOME/homebrew/bin:$HOME/bin:$PATH"
 
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
