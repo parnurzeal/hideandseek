@@ -23,6 +23,8 @@ ZSH_THEME="intheloop"
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+HISTSIZE=100000
+SAVEHIST=100000
 HIST_STAMPS="mm/dd/yyyy"
 
 # Set variable checker for cross-platform support

@@ -50,6 +50,9 @@ Plugin 'fatih/vim-go'
 " Plugin 'nsf/gocode', {'rtp': 'vim/'}
 " Jade syntax
 Plugin 'digitaltoad/vim-jade'
+" Typescript
+Plugin 'leafgarland/typescript-vim' " Typescript syntax.
+Plugin 'Quramy/tsuquyomi' " Typescript completions.
 " All-in-one of all langauges (syntax,indent, ...)
 Plugin 'sheerun/vim-polyglot'
 call vundle#end()             " required
@@ -145,7 +148,7 @@ inoremap <C-l> <Esc>:tabnext<CR>
 nnoremap <silent> <Esc><Esc>[D :execute 'silent! tabmove ' . (tabpagenr()-2)<CR>
 nnoremap <silent> <Esc><Esc>[C :execute 'silent! tabmove ' . tabpagenr()<CR>
 " NERDTree
-nmap <F2> :NERDTreeTabsToggle<CR>
+nmap <C-\> :NERDTreeTabsToggle<CR>
 let NERDTreeHighlightCursorline=1
 let NERDTreeIgnore = ['tmp']
 
